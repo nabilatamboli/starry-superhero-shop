@@ -1,3 +1,30 @@
+# ⭐ Starry Superhero Shop
+
+A React-based e-commerce website showcasing superhero-themed products.
+
+## Features
+
+- Dark superhero-themed UI
+- Responsive product grid
+
+## Tech Stack
+
+- React.js
+- CSS (custom)
+- JavaScript
+
+## How to Run Locally
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/nabilatamboli/starry-superhero-shop.git
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -1,0 +1,71 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0b1a3f, #1a2a6c, #0b1a3f);
+  color: white;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.hero-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px aqua;
+  animation: pulse 2s infinite;
+  font-family: cursive;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px #8e2de2, 0 0 20px #4a00e0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #4a00e0;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://wallpapers.com/images/hd/starry-background-pwpsz4kl27r7105i.jpg') repeat;
+  opacity: 0.2;
+  animation: starMove 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes starMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 10000px 10000px; }
+}

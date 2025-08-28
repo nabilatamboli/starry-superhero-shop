@@ -10,12 +10,16 @@ const ProductCard = ({ product }) => {
         alt={product.name}
         className="product-image"
       />
-      <h2 className="text-xl font-bold">{product.name}</h2>
-      <p className="text-yellow-400 font-semibold mt-1">${product.price}</p>
-      <button className="mt-3 w-full btn-accent hover:scale-105">
+      <div className="product-info">
+      <h2 className="product-name">{product.name}</h2>
+      <p className="product-price">${product.price}</p>
+      <button className="add-btn">
         Add to Cart
       </button>
     </div>
+
+  </div>
+  
   );
 };
 

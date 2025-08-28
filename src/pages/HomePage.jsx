@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ProductCard from "../components/ProductCard";
+import ProductSlider from "../components/ProductSlider";
+
 
 const products = [
   {
@@ -36,13 +38,13 @@ const HomePage = () => {
       <Navbar />
 
       <Hero />
+      <ProductSlider products={products} />
+      
 
-      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      
+      
     </div>
+    
   );
 };
 

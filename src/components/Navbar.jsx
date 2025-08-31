@@ -1,8 +1,10 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -16,23 +18,31 @@ const Navbar = () => {
           <h1 className="cool-heading">Infinity Collectible</h1>
         </div>
 
-        {}
-        <ul className="nav-menu">
+        {/* Hamburger toggle (mobile only) */}
+        <button 
+          className="menu-toggle" 
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
+
+        {/* Nav links */}
+        <ul className={`nav-menu ${isOpen ? "open" : ""}`}>
           <li className="nav-item">
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/products">Products</Link>
+            <Link to="/products" onClick={() => setIsOpen(false)}>Products</Link>
           </li>
           <li className="nav-item">
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </li>
         </ul>
 
-        {}
+        {/* Cart */}
         <div className="cart">
           🛒<span className="cart-badge">3</span>
         </div>

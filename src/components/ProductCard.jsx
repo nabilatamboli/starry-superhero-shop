@@ -12,9 +12,9 @@ const ProductCard = ({ product }) => {
       />
       <div className="product-info">
       <h2 className="product-name">{product.name}</h2>
-      <p className="product-price">${product.price}</p>
+      <p className="product-desc">{product.description}</p>
       <button className="add-btn">
-        Add to Cart
+        View Collection
       </button>
     </div>
 

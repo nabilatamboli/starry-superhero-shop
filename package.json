@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://nabilatamboli.github.io/starry-superhero-shop",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",

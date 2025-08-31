@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 const Hero = () => {
@@ -8,7 +9,9 @@ const Hero = () => {
       <p className="hero-subtitle">
         Find exclusive your favourite superhero merchandise and comic collectibles! Available here only!!!
       </p>
-      <button className="hero-button">Shop Now</button>
+        <Link to="/products">
+          <button className="hero-button">Shop Now</button>
+        </Link>
       <div className="stars"></div>
     </section>
   );

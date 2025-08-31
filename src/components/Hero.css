@@ -26,6 +26,8 @@
 }
 
 .hero-button {
+  position: relative;
+  z-index: 1;
   font-size: 20px;
   font-weight: bold;
   padding: 15px 40px;

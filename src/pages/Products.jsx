@@ -35,7 +35,7 @@ const Products = () => {
   return (
     <div className="products-page">
       <h1 className="products-title">Our Superhero Collectibles</h1>
-      <p className="products-subtitle">Explore exclusive superhero merch & comic collectibles!</p>
+      <p className="products-subtitle">Explore exclusive superhero merch & comic collectibles! Dive into your favourite world!! </p>
     
       <ProductSlider products={products} /> 
     </div>

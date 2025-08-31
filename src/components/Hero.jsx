@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="hero">
       <h2 className="hero-title">Welcome to Infinity Collectible Superhero Shop</h2>
       <p className="hero-subtitle">
-        Find exclusive your favourite superhero merchandise and comic collectibles! Available here only!!!
+        Find exclusive your favourite superhero merchandise and comic collectibles! Available here only!!!Dive into your favourite world!!
       </p>
         <Link to="/products">
           <button className="hero-button">Shop Now</button>

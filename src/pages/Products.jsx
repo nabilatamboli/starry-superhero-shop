@@ -1,10 +1,8 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
-import ProductSlider from "../components/ProductSlider";
 import "./Products.css";
 
-
-const products = [  
+const products = [
   {
     id: 1,
     name: "Superhero Cape",
@@ -20,26 +18,43 @@ const products = [
   {
     id: 3,
     name: "Comic Book",
-    description: "Dive into the worlds of your favorite heroes and villains with our exclusive comic book collection — rare editions and timeless classics included!",
+    description: "Exclusive editions and timeless classics for every superhero fan.",
     image: "https://tse3.mm.bing.net/th/id/OIP.hGNZrcX1obKyeZEIRgi6FwHaGt?pid=Api&P=0&h=180",
   },
   {
     id: 4,
     name: "Superhero Mask",
-    description: "Transform into your favorite superhero! Our mask collection features iconic designs for cosplay, parties, and collectible displays.",
+    description: "Cosplay and collectible superhero masks.",
     image: "https://tse1.mm.bing.net/th/id/OIP.vbNSIhkrMuGcAlvSiDfDLAHaFL?pid=Api&P=0&h=180",
   },
+
+  {
+    id: 5,
+    name: "Posters",
+    description: "High-quality posters for your favorite heroes.",
+    image: "https://tse1.mm.bing.net/th/id/OIP.VFTGGFqE_LCpyl-SRQZ_lAHaE8?pid=Api&P=0&h=180",
+  },
+  {
+    id: 6,
+    name: "Collectible Cards",
+    description: "Rare superhero collectible trading cards.",
+    image: "https://preview.redd.it/tq0kz48p4gr51.jpg?auto=webp&s=14b33a155963b113d18b1725f7b87ade4bef5f34",
+  },
+
 ];
 
 const Products = () => {
   return (
     <div className="products-page">
-      <h1 className="products-title">Our Superhero Collectibles</h1>
-      <p className="products-subtitle">Explore exclusive superhero merch & comic collectibles! Dive into your favourite world!! </p>
-    
-      <ProductSlider products={products} /> 
+      <h3 className="products-title">
+        Explore our wide range of superhero merchandise and exclusive collectibles!
+      </h3>
+      <div className="products-grid">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </div>
-    
   );
 };
 

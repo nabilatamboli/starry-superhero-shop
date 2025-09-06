@@ -4,9 +4,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #ffffff;
-  border-bottom: 1px solid #eaeaea;
-  font-family: "Poppins", sans-serif;
+  background: #ffffff; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar-container {
@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 10px 20px;
   height: 70px;
   box-sizing: border-box;
 }
@@ -27,38 +27,32 @@
 
 .logo-img {
   height: 50px;
-  width: 90px;
+  width: auto;
   margin-right: 8px;
 }
 
 .cool-heading {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #170e32;
-  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+  color: #111827; 
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-menu a {
   text-decoration: none;
-  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
 }
 
 .nav-item {
-  color: #2c2c2c;             
+  color: #374151;
   font-weight: 500;
-  font-size: 1.05rem;         
-  letter-spacing: 0.6px;      
   position: relative;
   cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 6px 0;
+  transition: color 0.3s ease;
 }
 
 .nav-item::after {
@@ -66,11 +60,10 @@
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: #0077ff;   
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  bottom: -4px;
+  left: 0;
+  background-color: #3B82F6; 
+  transition: width 0.3s;
 }
 
 .nav-item:hover::after {
@@ -78,15 +71,15 @@
 }
 
 .nav-item:hover {
-  color: #0077ff; 
-  transform: translateY(-2px);
-  text-shadow: 0 1px 3px rgba(0, 119, 255, 0.25);
+  color: #3B82F6;
 }
+
 .cart {
   font-size: 22px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s;
+  color: #374151;
 }
 
 .cart:hover {
@@ -95,22 +88,21 @@
 
 .cart-badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #ff4444;
+  top: -6px;
+  right: -6px;
+  background: #EF4444; 
   color: white;
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 50%;
 }
 
-/* Mobile */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   background: none;
   border: none;
-  color: #333;
+  color: #111827;
   cursor: pointer;
 }
 
@@ -124,13 +116,12 @@
     position: absolute;
     top: 70px;
     right: 0;
-    width: 220px;
-    background: #fff;
+    width: 200px;
+    background: #ffffff;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     padding: 1rem;
-    box-shadow: -2px 4px 10px rgba(0,0,0,0.1);
-    border-left: 1px solid #eee;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu.open {

@@ -1,0 +1,44 @@
+/* === Hero Section === */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: #f9fafb; /* Light gray background */
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111827;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  color: #374151;
+  font-weight: 400;
+}
+
+.hero-button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  background: #3B82F6; /* Modern blue */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.hero-button:hover {
+  background: #2563EB; /* Darker blue */
+  transform: scale(1.05);
+}

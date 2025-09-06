@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -8,43 +8,33 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
+        
         <div className="logo">
           <img 
-            src="https://tse2.mm.bing.net/th/id/OIP.LUoha8IDEPwcZ_FpibFF2gHaEK?pid=Api&P=0&h=180"
-            alt="Starry Superhero" 
+            src="https://logos-world.net/wp-content/uploads/2020/05/Avengers-Symbol.jpg" 
+            alt="Infinity Collectible Logo"
             className="logo-img"
           />
           <h1 className="cool-heading">Infinity Collectible</h1>
         </div>
 
-        {/* Hamburger toggle (mobile only) */}
-        <button 
-          className="menu-toggle" 
+        <button
+          className="menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
         >
           ☰
         </button>
 
-        {/* Nav links */}
         <ul className={`nav-menu ${isOpen ? "open" : ""}`}>
-          <li className="nav-item">
-            <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/products" onClick={() => setIsOpen(false)}>Products</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-          </li>
+          <li><Link to="/" className="nav-item" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link to="/products" className="nav-item" onClick={() => setIsOpen(false)}>Products</Link></li>
+          <li><Link to="/about" className="nav-item" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link to="/contact" className="nav-item" onClick={() => setIsOpen(false)}>Contact</Link></li>
         </ul>
 
-        {/* Cart */}
         <div className="cart">
-          🛒<span className="cart-badge">3</span>
+          🛒 <span className="cart-badge">3</span>
         </div>
       </div>
     </nav>

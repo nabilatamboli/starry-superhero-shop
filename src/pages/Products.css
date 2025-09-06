@@ -1,18 +1,20 @@
 .products-page {
   text-align: center;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0b1a3f, #1a2a6c, #0b1a3f);
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  background: #F9FAFB; /* Soft gray background */
+  color: #111827; /* Dark neutral text */
+  padding: 40px 20px;
 }
 
 .products-title {
-  font-size: 36px;
-  font-family: cursive;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px aqua;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
 }
 
 .products-subtitle {
-  font-size: 20px;
-  color: #c0c0ff;
+  font-size: 1.1rem;
+  color: #6B7280;
+  margin-bottom: 24px;
 }

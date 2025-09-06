@@ -11,7 +11,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="logo">
           <img 
-            src="https://tse2.mm.bing.net/th/id/OIP.RB-sR7Qsy3MUEH3ZNrtg5AHaFb?pid=Api&P=0&h=180" 
+            src="https://tse2.mm.bing.net/th/id/OIP.LUoha8IDEPwcZ_FpibFF2gHaEK?pid=Api&P=0&h=180"
             alt="Starry Superhero" 
             className="logo-img"
           />

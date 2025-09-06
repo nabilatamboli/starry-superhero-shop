@@ -1,3 +1,4 @@
+/* === Slider === */
 .slider-container {
   position: relative;
   width: 100%;
@@ -16,17 +17,26 @@
   display: flex;
   justify-content: center;
   align-items: center; 
+  padding: 20px;
 }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0,0,0,0.05);
   border: none;
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;
+  color: #374151; /* Neutral dark */
+  border-radius: 50%;
+  padding: 6px 12px;
+  transition: background 0.2s;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.1);
 }
 
 .arrow.left {

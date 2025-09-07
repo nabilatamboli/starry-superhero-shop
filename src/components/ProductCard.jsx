@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 
@@ -13,9 +14,12 @@ const ProductCard = ({ product }) => {
       <div className="product-info">
       <h2 className="product-name">{product.name}</h2>
       <p className="product-desc">{product.description}</p>
+      <Link to={`/collections/${product.route}`}>
       <button className="add-btn">
         View Collection
       </button>
+      </Link>
+
     </div>
 
   </div>

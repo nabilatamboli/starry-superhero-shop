@@ -1,5 +1,5 @@
 import React from "react";
-import "./Collection.css"; 
+import "./Collection.css";
 
 const figures = [
   {
@@ -24,19 +24,22 @@ const figures = [
     id: 4,
     name: "Iron Man",
     image: "/images/action-figures/iron-man.jpg",
-    description: "Tony Stark in his iconic armored suit, blending genius with firepower.",
+    description:
+      "Tony Stark in his iconic armored suit, blending genius with firepower.",
   },
   {
     id: 5,
     name: "Thor",
     image: "/images/action-figures/thor.jpg",
-    description: "The God of Thunder, wielding Mjölnir and commanding lightning.",
+    description:
+      "The God of Thunder, wielding Mjölnir and commanding lightning.",
   },
   {
     id: 6,
-    name: "Bat-Man",
+    name: "Batman",
     image: "/images/action-figures/batman.jpg",
-    description: "The Dark Knight of Gotham, armed with intelligence, strategy, and gadgets.",
+    description:
+      "The Dark Knight of Gotham, armed with intelligence, strategy, and gadgets.",
   },
   {
     id: 7,
@@ -55,18 +58,20 @@ const figures = [
 const ActionFiguresCollection = () => {
   return (
     <div className="collection-page">
-      <h1 className="collection-title">Epic Action Figures 🎮</h1>
+      <h1 className="collection-title">Epic Action Figures 🦸</h1>
       <div className="collection-grid">
         {figures.map((figure) => (
           <div key={figure.id} className="collection-card">
-            <img
-              src={figure.image}
-              alt={figure.name}
-              className="collection-image"
-            />
+            <div className="card-image-wrapper">
+              <img
+                src={figure.image}
+                alt={figure.name}
+                className="collection-image"
+              />
+            </div>
             <h2 className="collection-name">{figure.name}</h2>
             <p className="collection-desc">{figure.description}</p>
-            <button className="cta-button">🛒 Add to Cart</button>
+            <button className="cta-button">⭐ Add to Collection</button>
           </div>
         ))}
       </div>

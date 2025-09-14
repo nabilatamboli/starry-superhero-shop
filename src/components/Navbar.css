@@ -4,8 +4,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #ffffff; 
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #fdfaf7;
+  border-bottom: 1px solid #f1f1f1;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -15,94 +15,100 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 0 20px;
   height: 70px;
-  box-sizing: border-box;
+}
+.brand {
+  text-decoration: none;
+  display: flex;
+  align-items: center; 
+}
+
+.brand-title {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  height: 40px;      
+  width: auto;       
+  object-fit: contain;
 }
 
-.logo-img {
-  height: 50px;
-  width: auto;
-  margin-right: 8px;
+.brand-text {
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: black;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
-
-.cool-heading {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #111827; 
-}
-
+/* Nav menu */
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 25px;
 }
 
-.nav-menu a {
+.nav-menu li a {
   text-decoration: none;
-}
-
-.nav-item {
-  color: #374151;
-  font-weight: 500;
-  position: relative;
-  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #333;
   transition: color 0.3s ease;
 }
 
-.nav-item::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #3B82F6; 
-  transition: width 0.3s;
+.nav-menu li a:hover {
+  color: #ff6b00;
+}
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between cart and login */
 }
 
-.nav-item:hover::after {
-  width: 100%;
+.login-button {
+  padding: 6px 14px;
+  color: #121111;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
-.nav-item:hover {
-  color: #3B82F6;
+.login-button:hover {
+  background-color: #fbfbfb;
+  color: #ff3e3e;
 }
 
+/* Cart */
 .cart {
   font-size: 22px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.2s;
-  color: #374151;
-}
-
-.cart:hover {
-  transform: scale(1.1);
+  margin-left: 20px;
+  color: #333;
 }
 
 .cart-badge {
   position: absolute;
   top: -6px;
-  right: -6px;
-  background: #EF4444; 
+  right: -10px;
+  background: #ff6b00;
   color: white;
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 50%;
 }
 
+/* Mobile menu */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   background: none;
   border: none;
-  color: #111827;
   cursor: pointer;
 }
 
@@ -119,16 +125,16 @@
     width: 200px;
     background: #ffffff;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
     padding: 1rem;
-    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 4px 10px rgba(0,0,0,0.1);
   }
 
   .nav-menu.open {
     display: flex;
   }
 
-  .nav-item {
+  .nav-menu li a {
     font-size: 1rem;
     padding: 8px 0;
   }

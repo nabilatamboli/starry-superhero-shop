@@ -1,73 +1,107 @@
 .collection-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
   font-family: 'Poppins', sans-serif;
+  background: #f9f9f9; 
+  border-radius: 12px;
 }
 
 .collection-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.0rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #1f2937;
+  margin-bottom: 1.0rem;
+  color: #222;
+  position: relative;
 }
 
+.collection-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ffc107; 
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid layout */
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
+/* Collection cards */
 .collection-card {
-  background: #fff;
-  border-radius: 16px;
+  background: #ffffff;
+  border-radius: 14px;
   padding: 1.2rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #eee;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .collection-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  border-color: #ffc107; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
+/* Images */
 .collection-image {
   width: 100%;
   height: 220px;
-  object-fit: contain; 
+  object-fit: contain;
   border-radius: 12px;
   margin-bottom: 1rem;
-  background: #ffffff;   
+  background: #fafafa; /* light backdrop */
+  padding: 10px;
 }
+
+/* Text */
 .collection-name {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
-  margin: 0.5rem 0;
+  color: #111;
+  margin: 0.6rem 0;
 }
 
 .collection-desc {
   font-size: 0.95rem;
-  color: #4b5563;
-  margin-bottom: 1rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
 }
 
+/* CTA button (yellow like Bewakoof) */
 .cta-button {
-  background-color: #18093a;
-  color: #ffffff;           
-  border: 1px solid #cccccc;
+  background-color: #ffc107;
+  color: #111;
+  border: none;
   padding: 10px 22px;
-  font-size: 16px;
-  font-weight: 520;
-  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 25px;
   cursor: pointer;
-  align-items: center;
-  gap: 6px;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #e0e0e0; 
-  color:#18093a;
+  background-color: #f53a19;
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .collection-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-title {
+    font-size: 1.5rem;
+  }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Collection.css"; 
+import "./Collection.css";
 
 const capes = [
   {
@@ -52,11 +52,16 @@ const capes = [
   },
 ];
 
-
 const CapesCollection = () => {
   return (
     <div className="collection-page">
-      <h1 className="collection-title">Coolest Capes 😎</h1>
+      <h1 className="collection-title">
+        Coolest Capes <span className="highlight">Collection</span> 🦸‍♀️
+      </h1>
+      <p className="collection-subtitle">
+        From stealth missions to regal battles — discover the cape that defines your hero style.
+      </p>
+
       <div className="collection-grid">
         {capes.map((cape) => (
           <div key={cape.id} className="collection-card">
@@ -65,9 +70,11 @@ const CapesCollection = () => {
               alt={cape.name}
               className="collection-image"
             />
-            <h2 className="collection-name">{cape.name}</h2>
-            <p className="collection-desc">{cape.description}</p>
-            <button className="cta-button">🛒 Add to Cart</button>
+            <div className="collection-info">
+              <h2 className="collection-name">{cape.name}</h2>
+              <p className="collection-desc">{cape.description}</p>
+              <button className="cta-button">🛒 Add to Cart</button>
+            </div>
           </div>
         ))}
       </div>

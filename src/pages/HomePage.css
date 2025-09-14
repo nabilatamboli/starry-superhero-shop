@@ -1,117 +1,230 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
-  color: #333;
+  color: #222;
   margin: 0;
   padding: 0;
 }
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin: 40px 0 20px;
-  color: #222;
-}
-
-.featured-section {
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.category-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 15px;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.category-card img {
+.hero-banner {
+  position: relative;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.category-card h3 {
-  margin-top: 12px;
-  font-size: 1.2rem;
-  color: #444;
-}
-
-.category-card:hover {
-  transform: translateY(-5px);
-}
-
-.why-section {
-  padding: 50px 20px;
-  background-color: #f1f3f6;
-}
-
-.why-cards {
+  height: 90vh; 
+  background: url("https://images.wallpapersden.com/image/download/cw-dc-universe-superheros-4k_bGVuZWyUmZqaraWkpJRobWllrWdpa20.jpg") no-repeat center center/cover;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
   justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.why-card {
-  flex: 1 1 250px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   text-align: center;
-}
-
-.why-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.why-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.cta-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ff3e3e, #ff7b00);
   color: #fff;
-  text-align: center;
+  overflow: hidden;
 }
 
-.cta-section h2 {
-  font-size: 2rem;
+/* Optional overlay for better readability */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-.cta-button {
-  background: #fff;
-  color: #ff3e3e;
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background: #ffeb3b;
+  color: #000;
   font-size: 1.1rem;
-  font-weight: bold;
-  padding: 12px 28px;
+  font-weight: 600;
+  padding: 14px 32px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
-.cta-button:hover {
-  background: #f1f1f1;
-  color: #e60000;
+.hero-btn:hover {
+  background: #f44336;
+  color: #fff;
 }
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 40px 0 20px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffeb3b;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+/* Categories */
+.hero-categories {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-categories .category-card {
+  background: rgba(255, 255, 255, 0.1); /* glass effect */
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.hero-categories .category-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-categories .category-card h3 {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.hero-categories .category-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+
+.why-section {
+  padding: 40px 20px;          /* enough spacing from hero section */
+  background-color: #fdfaf7;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1b0a3d;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+.why-section {
+  padding: 30px 15px;             /* reduce overall padding */
+  background-color: #f7f7f7;      /* softer, less bright background */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #1b0a3d;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.08); /* subtle shadow */
+}
+
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;                     /* reduced gap between cards */
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-card {
+  flex: 1 1 370px;              
+  max-width: 250px;
+  background: #ffffff;
+  padding: 20px;                 
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06); 
+  text-align: center;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+.why-card:nth-child(4) {
+  flex: 1 1 100%;       
+  max-width: 100%;
+  padding: 15px;
+}
+.why-card:hover {
+  background: #a2c5f3; 
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.why-card h3 {
+  font-size: 1.15rem;            
+  margin-bottom: 1px;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 0.92rem;
+  color: #555;                  
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .why-section {
+    padding: 25px 10px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .why-card {
+    flex: 1 1 180px;
+    max-width: 200px;
+    padding: 12px;
+  }
+
+  .why-card h3 {
+    font-size: 1rem;
+  }
+
+  .why-card p {
+    font-size: 0.85rem;
+  }
+}
+

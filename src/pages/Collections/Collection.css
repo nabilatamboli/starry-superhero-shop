@@ -73,7 +73,12 @@
   margin-bottom: 1.2rem;
   line-height: 1.5;
 }
-
+.collection-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff3e3e;
+  margin-bottom: 8px;
+}
 /* CTA button (yellow like Bewakoof) */
 .cta-button {
   background-color: #ffc107;

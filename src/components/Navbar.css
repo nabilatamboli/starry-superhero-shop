@@ -85,24 +85,23 @@
 
 /* Cart */
 .cart {
-  font-size: 22px;
   position: relative;
+  font-size: 1.5rem;
   cursor: pointer;
-  margin-left: 20px;
-  color: #333;
+  text-decoration: none;
 }
 
 .cart-badge {
   position: absolute;
-  top: -6px;
+  top: -8px;
   right: -10px;
-  background: #ff6b00;
-  color: white;
-  font-size: 12px;
+  background: #ff3e3e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
   padding: 2px 6px;
   border-radius: 50%;
 }
-
 /* Mobile menu */
 .menu-toggle {
   display: none;

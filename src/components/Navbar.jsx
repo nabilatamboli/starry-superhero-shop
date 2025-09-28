@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext"; 
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { cart } = useCart();
 
   return (
     <nav className="navbar">
@@ -36,9 +38,12 @@ const Navbar = () => {
 
         {/* Cart & Login */}
         <div className="navbar-actions">
-          <div className="cart">
-            🛒 <span className="cart-badge">3</span>
-          </div>
+          <Link to="/cart" className="cart">
+            🛒
+            {cart.length > 0 && (
+              <span className="cart-badge">{cart.length}</span>
+            )}
+          </Link>
           <Link to="/login" className="login-button">
             Login 
           </Link>

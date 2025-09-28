@@ -9,7 +9,7 @@ const HomePage = () => {
       {/*  */}
       <section className="hero-banner">
   <div className="hero-content">
-    <h1 className="hero-title">Unleash Your Inner Superhero 🦸‍♂️</h1>
+    <h1 className="hero-title">Unleash Your Inner Superhero </h1>
     <p className="hero-subtitle">
       Exclusive comics, collectibles, and merch inspired by your favorite heroes.
     </p>

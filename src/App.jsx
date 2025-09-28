@@ -9,11 +9,18 @@ import CollectiblesCollection from "./pages/Collections/CollectiblesCollection";
 import CollectibleCardsCollection from "./pages/Collections/CollectibleCardsCollection";
 import ComicBooksCollection from "./pages/Collections/ComicBooksCollection";
 import PosterCollection from "./pages/Collections/PosterCollection";
+import { CartProvider } from "./context/CartContext";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
+import LoginPage from "./pages/LoginPage";
 
 
 
 function App() {
   return (
+   <CartProvider>
     <Router>
       <div className="app">
         <Navbar />
@@ -27,11 +34,19 @@ function App() {
             <Route path="/collections/cards" element={<CollectibleCardsCollection />} />
             <Route path="/collections/comics" element={<ComicBooksCollection />} />
             <Route path="/collections/posters" element={<PosterCollection />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/Login" element={<LoginPage />} />
+
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
+  </CartProvider>
+
   );
 }
 
